@@ -1,0 +1,5 @@
+Исходный код для проекта 
+https://github.com/kataevilya/multiplication-math-game/tree/main
+
+Сайт проекту 
+https://multiplication-math-game.vercel.app/

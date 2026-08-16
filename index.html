@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Математический тренажёр</title>
+    <title>Математический тренажёр – скачать и демо</title>
     <style>
-        /* Обнуление отступов и строгий стиль */
+        /* Строгий стиль без закруглений */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             background: #1a3a2a;
@@ -20,27 +19,23 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             padding: 30px 20px;
         }
-
         .container {
-            max-width: 800px;
+            max-width: 900px;
             width: 100%;
             background: #2a4a3a;
             border: 3px solid #f39c12;
-            padding: 40px 35px;
+            padding: 30px 25px;
+            margin-bottom: 30px;
         }
-
         h1 {
             font-size: 3rem;
             font-weight: 700;
             color: #f39c12;
             text-align: center;
             margin-bottom: 8px;
-            letter-spacing: 1px;
         }
-
         .subtitle {
             font-size: 1.2rem;
             text-align: center;
@@ -48,9 +43,7 @@
             border-bottom: 2px solid #f39c12;
             padding-bottom: 10px;
             margin-bottom: 25px;
-            font-weight: 300;
         }
-
         .description {
             text-align: left;
             font-size: 1.05rem;
@@ -58,25 +51,21 @@
             background: #1f3a2a;
             padding: 20px 25px;
             border: 1px solid #4a6a4a;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
         }
-
         .description ul {
             list-style: none;
             padding: 0;
         }
-
         .description li {
             padding: 5px 0 5px 28px;
             background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23f39c12" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') left center no-repeat;
             background-size: 18px;
         }
-
         .download-area {
             text-align: center;
-            margin: 20px 0 10px;
+            margin: 20px 0 15px;
         }
-
         .download-btn {
             display: inline-block;
             background: #f39c12;
@@ -88,24 +77,19 @@
             text-decoration: none;
             transition: 0.15s;
             cursor: pointer;
-            letter-spacing: 0.5px;
         }
-
         .download-btn:hover {
             background: #e08e0b;
             border-color: #b87808;
         }
-
         .download-btn:active {
             background: #c47e08;
         }
-
         .file-info {
             font-size: 0.9rem;
             color: #bbb;
             margin-top: 12px;
         }
-
         .badge {
             display: inline-block;
             background: #3a5a3a;
@@ -116,14 +100,131 @@
             font-size: 0.8rem;
             font-weight: 600;
         }
-
         .footnote {
-            margin-top: 30px;
+            margin-top: 25px;
             font-size: 0.9rem;
             color: #888;
-            border-top: 1px solid #3a5a3a;
+            border-top: 1px solid #3a5a5a;
             padding-top: 18px;
             text-align: center;
+        }
+
+        /* Демо-блок */
+        .demo-section {
+            border-top: 3px solid #f39c12;
+            padding-top: 25px;
+            margin-top: 10px;
+        }
+        .demo-btn {
+            display: inline-block;
+            background: #2ecc71;
+            color: #1a2a1a;
+            font-size: 1.8rem;
+            font-weight: 700;
+            padding: 15px 40px;
+            border: 2px solid #27ae60;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.15s;
+            margin: 10px 0;
+        }
+        .demo-btn:hover {
+            background: #27ae60;
+            border-color: #1e8449;
+        }
+
+        /* Демо-интерфейс (изначально скрыт) */
+        #demo-container {
+            display: none;
+            margin-top: 20px;
+            background: #1f3a2a;
+            padding: 20px;
+            border: 2px solid #4a6a4a;
+        }
+        #demo-container.active {
+            display: block;
+        }
+        .demo-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .demo-row label {
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+        .demo-row input, .demo-row select {
+            padding: 8px 12px;
+            font-size: 1.2rem;
+            background: #2a4a3a;
+            color: #fff;
+            border: 1px solid #5a7a5a;
+        }
+        .demo-row button {
+            padding: 10px 25px;
+            font-size: 1.2rem;
+            background: #3498db;
+            border: 2px solid #2980b9;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.15s;
+        }
+        .demo-row button:hover {
+            background: #2980b9;
+        }
+        .demo-row button:active {
+            background: #1c6ea4;
+        }
+        #demo-example {
+            font-size: 3rem;
+            text-align: center;
+            padding: 20px;
+            background: #0f2e1b;
+            border: 2px solid #4a6a4a;
+            margin: 15px 0;
+        }
+        #demo-answer {
+            font-size: 2rem;
+            padding: 10px;
+            width: 150px;
+            text-align: center;
+            background: #2a4a3a;
+            color: #fff;
+            border: 2px solid #5a7a5a;
+        }
+        .demo-stats {
+            font-size: 1.2rem;
+            color: #ddd;
+            margin: 10px 0;
+        }
+        .demo-timer {
+            font-size: 1.5rem;
+            color: #f1c40f;
+        }
+        .demo-pic {
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        .demo-pic:hover {
+            border-color: #f39c12;
+        }
+        .demo-pic img {
+            max-width: 120px;
+            height: auto;
+        }
+        /* Адаптивность */
+        @media (max-width: 600px) {
+            .container { padding: 15px; }
+            h1 { font-size: 2.2rem; }
+            .download-btn { font-size: 1.5rem; padding: 14px 30px; }
+            .demo-btn { font-size: 1.3rem; padding: 12px 25px; }
+            #demo-example { font-size: 2rem; }
+            .demo-row { flex-direction: column; align-items: stretch; }
         }
     </style>
 </head>
@@ -135,10 +236,11 @@
         <div class="description">
             <p style="margin-bottom: 10px;"><strong>Возможности:</strong></p>
             <ul>
-                <li>Настройка времени, количества примеров и сложности</li>
+                <li>Настройка времени, количества примеров, сложности</li>
                 <li>Выбор операций: +/– и/или ×/÷</li>
-                <li>Мгновенная проверка со звуковыми сигналами</li>
-                <li>Итоговый результат с оценкой и сохранением в .txt</li>
+                <li>Режим «На скорость» – ограниченное время на каждый пример</li>
+                <li>Мгновенная проверка со звуками (в программе)</li>
+                <li>Сохранение результата с подробной статистикой и списком примеров</li>
                 <li>Полноэкранный интерфейс – удобно для детей</li>
             </ul>
         </div>
@@ -155,19 +257,273 @@
             </p>
         </div>
 
+        <!-- Демо-версия -->
+        <div class="demo-section">
+            <button class="demo-btn" id="toggleDemoBtn">▶ Протестировать тренажёр (демо)</button>
+            <div id="demo-container">
+                <h2 style="color: #f39c12; text-align: center; margin-bottom: 15px;">🧪 Демо-версия (урезанный функционал)</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 15px;">
+                    <div class="demo-pic" id="boyPic">
+                        <img src="assets/boy.png" alt="Мальчик" style="max-width: 120px;" onerror="this.alt='[рисунок]'; this.style.fontSize='20px';">
+                    </div>
+                    <div class="demo-pic" id="dogPic" style="display: none;">
+                        <img src="assets/dog.png" alt="Собака" style="max-width: 120px;" onerror="this.alt='[собака]';">
+                    </div>
+                </div>
+
+                <div class="demo-row">
+                    <label>Сложность:</label>
+                    <select id="demoDiff">
+                        <option value="Легкий">Легкий</option>
+                        <option value="Средний" selected>Средний</option>
+                        <option value="Сложный">Сложный</option>
+                    </select>
+                    <label>Операции:</label>
+                    <select id="demoOps">
+                        <option value="pm">+ и -</option>
+                        <option value="md">× и ÷</option>
+                        <option value="all" selected>Все</option>
+                    </select>
+                    <button id="demoStartBtn">Начать</button>
+                </div>
+
+                <div id="demo-example">Нажмите «Начать»</div>
+                <div style="text-align: center;">
+                    <input type="number" id="demo-answer" placeholder="Ответ" disabled>
+                    <button id="demoCheckBtn" disabled>Ответить</button>
+                </div>
+                <div class="demo-stats">
+                    <span>Правильно: <span id="demoCorrect">0</span></span>
+                    <span style="margin-left: 20px;">Ошибок: <span id="demoErrors">0</span></span>
+                    <span style="margin-left: 20px;">Пропущено: <span id="demoSkipped">0</span></span>
+                    <span style="margin-left: 20px;" class="demo-timer" id="demoTimer">⏱ 0</span>
+                </div>
+            </div>
+        </div>
+
         <div class="footnote">
             Версия 1.0 · Для Windows 7/10/11
         </div>
     </div>
 
     <script>
-        // Если файл называется иначе, можно поменять ссылку вручную,
-        // либо просто переименовать сам exe-файл в main.exe
-        console.log('Ссылка ведёт на main.exe. При необходимости измените href.');
+        // ---------- Демо-версия (JavaScript) ----------
+        (function() {
+            const demoContainer = document.getElementById('demo-container');
+            const toggleBtn = document.getElementById('toggleDemoBtn');
+            const startBtn = document.getElementById('demoStartBtn');
+            const checkBtn = document.getElementById('demoCheckBtn');
+            const exampleDiv = document.getElementById('demo-example');
+            const answerInput = document.getElementById('demo-answer');
+            const correctSpan = document.getElementById('demoCorrect');
+            const errorsSpan = document.getElementById('demoErrors');
+            const skippedSpan = document.getElementById('demoSkipped');
+            const timerSpan = document.getElementById('demoTimer');
+            const diffSelect = document.getElementById('demoDiff');
+            const opsSelect = document.getElementById('demoOps');
+            const boyPic = document.getElementById('boyPic');
+            const dogPic = document.getElementById('dogPic');
+
+            let demoState = {
+                running: false,
+                questions: [],
+                currentIndex: 0,
+                correct: 0,
+                errors: 0,
+                skipped: 0,
+                timePerQuestion: 5,
+                timerId: null,
+                questionTimerId: null,
+                answered: false,
+                boyClickCount: 0,
+                dogVisible: false
+            };
+
+            // Пасхалка: клик по мальчику
+            boyPic.addEventListener('click', function() {
+                if (!demoState.running) return;
+                demoState.boyClickCount++;
+                if (demoState.boyClickCount >= 5) {
+                    demoState.boyClickCount = 0;
+                    // Показать собаку
+                    dogPic.style.display = 'inline-block';
+                    demoState.dogVisible = true;
+                    setTimeout(() => {
+                        dogPic.style.display = 'none';
+                        demoState.dogVisible = false;
+                    }, 2000);
+                }
+            });
+
+            // Клик по собаке - меняем картинку на dog1.png (если есть)
+            dogPic.addEventListener('click', function() {
+                if (demoState.dogVisible) {
+                    const img = dogPic.querySelector('img');
+                    if (img) {
+                        img.src = 'assets/dog1.png';
+                        img.onerror = function() { this.alt = '[другая собака]'; };
+                    }
+                }
+            });
+
+            function generateQuestions(count, diff, ops) {
+                const qs = [];
+                const ranges = {
+                    'Легкий': [1, 20],
+                    'Средний': [10, 100],
+                    'Сложный': [50, 500]
+                };
+                const r = ranges[diff] || [10, 100];
+                const opsList = ops === 'all' ? ['+', '-', '*', '/'] : (ops === 'pm' ? ['+', '-'] : ['*', '/']);
+
+                for (let i = 0; i < count; i++) {
+                    const op = opsList[Math.floor(Math.random() * opsList.length)];
+                    let a, b, answer, symbol;
+                    if (op === '+') {
+                        a = rand(...r);
+                        b = rand(...r);
+                        answer = a + b;
+                        symbol = '+';
+                    } else if (op === '-') {
+                        a = rand(...r);
+                        b = rand(...r);
+                        if (a < b) [a, b] = [b, a];
+                        answer = a - b;
+                        symbol = '-';
+                    } else if (op === '*') {
+                        const rm = (diff === 'Легкий') ? [2,5] : (diff === 'Средний' ? [2,10] : [2,20]);
+                        a = rand(...rm);
+                        b = rand(...rm);
+                        answer = a * b;
+                        symbol = '×';
+                    } else if (op === '/') {
+                        const rm = (diff === 'Легкий') ? [2,5] : (diff === 'Средний' ? [2,10] : [2,20]);
+                        a = rand(...rm);
+                        b = rand(...rm);
+                        const product = a * b;
+                        answer = b;
+                        a = product;
+                        symbol = ':';
+                    }
+                    qs.push({ a, b, symbol, answer });
+                }
+                return qs;
+            }
+
+            function rand(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+
+            function startDemo() {
+                if (demoState.running) return;
+                const count = 5; // фиксированное число примеров для демо
+                const diff = diffSelect.value;
+                const ops = opsSelect.value;
+                demoState.questions = generateQuestions(count, diff, ops);
+                demoState.currentIndex = 0;
+                demoState.correct = 0;
+                demoState.errors = 0;
+                demoState.skipped = 0;
+                demoState.running = true;
+                demoState.answered = false;
+                demoState.boyClickCount = 0;
+
+                correctSpan.textContent = '0';
+                errorsSpan.textContent = '0';
+                skippedSpan.textContent = '0';
+                answerInput.value = '';
+                answerInput.disabled = false;
+                checkBtn.disabled = false;
+
+                // Общий таймер (30 секунд для демо)
+                let totalTime = 30;
+                if (demoState.timerId) clearInterval(demoState.timerId);
+                demoState.timerId = setInterval(() => {
+                    totalTime--;
+                    timerSpan.textContent = '⏱ ' + totalTime;
+                    if (totalTime <= 0) {
+                        clearInterval(demoState.timerId);
+                        demoState.running = false;
+                        answerInput.disabled = true;
+                        checkBtn.disabled = true;
+                        exampleDiv.textContent = '⏰ Время вышло!';
+                        alert('Демо-время истекло. Нажмите "Начать" снова.');
+                    }
+                }, 1000);
+
+                showNextQuestion();
+            }
+
+            function showNextQuestion() {
+                if (!demoState.running) return;
+                if (demoState.currentIndex >= demoState.questions.length) {
+                    finishDemo();
+                    return;
+                }
+                const q = demoState.questions[demoState.currentIndex];
+                exampleDiv.textContent = `${q.a} ${q.symbol} ${q.b} = ?`;
+                answerInput.value = '';
+                answerInput.focus();
+                demoState.answered = false;
+
+                // Таймер на вопрос (5 секунд)
+                if (demoState.questionTimerId) clearTimeout(demoState.questionTimerId);
+                demoState.questionTimerId = setTimeout(() => {
+                    if (!demoState.answered && demoState.running) {
+                        // пропуск
+                        demoState.skipped++;
+                        skippedSpan.textContent = demoState.skipped;
+                        demoState.currentIndex++;
+                        showNextQuestion();
+                    }
+                }, 5000);
+            }
+
+            function checkAnswer() {
+                if (!demoState.running || demoState.answered) return;
+                const q = demoState.questions[demoState.currentIndex];
+                const userAnswer = parseInt(answerInput.value, 10);
+                if (isNaN(userAnswer)) return;
+
+                demoState.answered = true;
+                if (demoState.questionTimerId) {
+                    clearTimeout(demoState.questionTimerId);
+                    demoState.questionTimerId = null;
+                }
+
+                if (userAnswer === q.answer) {
+                    demoState.correct++;
+                    correctSpan.textContent = demoState.correct;
+                } else {
+                    demoState.errors++;
+                    errorsSpan.textContent = demoState.errors;
+                }
+                demoState.currentIndex++;
+                showNextQuestion();
+            }
+
+            function finishDemo() {
+                demoState.running = false;
+                if (demoState.timerId) clearInterval(demoState.timerId);
+                if (demoState.questionTimerId) clearTimeout(demoState.questionTimerId);
+                answerInput.disabled = true;
+                checkBtn.disabled = true;
+                exampleDiv.textContent = '🏁 Тест завершён! Нажмите "Начать" снова.';
+                alert(`Демо завершено!\nПравильно: ${demoState.correct}\nОшибок: ${demoState.errors}\nПропущено: ${demoState.skipped}`);
+            }
+
+            startBtn.addEventListener('click', startDemo);
+            checkBtn.addEventListener('click', checkAnswer);
+            answerInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') checkAnswer();
+            });
+
+            // Показать/скрыть демо-блок
+            toggleBtn.addEventListener('click', function() {
+                const isActive = demoContainer.classList.toggle('active');
+                this.textContent = isActive ? '✖ Скрыть демо' : '▶ Протестировать тренажёр (демо)';
+            });
+        })();
     </script>
 </body>
-<<<<<<< HEAD
 </html>
-=======
-</html>
->>>>>>> 951748c56247362c2e72b01c0c4d24004df70c9d

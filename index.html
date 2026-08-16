@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Математический тренажёр</title>
+    <style>
+        /* Обнуление отступов и строгий стиль */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #1a3a2a;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: #2a4a3a;
+            border: 3px solid #f39c12;
+            padding: 40px 35px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #f39c12;
+            text-align: center;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            text-align: center;
+            color: #ddd;
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+
+        .description {
+            text-align: left;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            background: #1f3a2a;
+            padding: 20px 25px;
+            border: 1px solid #4a6a4a;
+            margin-bottom: 30px;
+        }
+
+        .description ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .description li {
+            padding: 5px 0 5px 28px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23f39c12" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') left center no-repeat;
+            background-size: 18px;
+        }
+
+        .download-area {
+            text-align: center;
+            margin: 20px 0 10px;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #f39c12;
+            color: #1a2a1a;
+            font-size: 2rem;
+            font-weight: 700;
+            padding: 18px 50px;
+            border: 2px solid #d48a0a;
+            text-decoration: none;
+            transition: 0.15s;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+        }
+
+        .download-btn:hover {
+            background: #e08e0b;
+            border-color: #b87808;
+        }
+
+        .download-btn:active {
+            background: #c47e08;
+        }
+
+        .file-info {
+            font-size: 0.9rem;
+            color: #bbb;
+            margin-top: 12px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #3a5a3a;
+            color: #eee;
+            padding: 3px 15px;
+            border: 1px solid #5a7a5a;
+            margin: 0 5px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .footnote {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #888;
+            border-top: 1px solid #3a5a3a;
+            padding-top: 18px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧮 Математический тренажёр</h1>
+        <div class="subtitle">Интерактивная тренировка устного счёта</div>
+
+        <div class="description">
+            <p style="margin-bottom: 10px;"><strong>Возможности:</strong></p>
+            <ul>
+                <li>Настройка времени, количества примеров и сложности</li>
+                <li>Выбор операций: +/– и/или ×/÷</li>
+                <li>Мгновенная проверка со звуковыми сигналами</li>
+                <li>Итоговый результат с оценкой и сохранением в .txt</li>
+                <li>Полноэкранный интерфейс – удобно для детей</li>
+            </ul>
+        </div>
+
+        <div class="download-area">
+            <a href="main.exe" download class="download-btn">⬇ Скачать .exe</a>
+            <div class="file-info">
+                <span class="badge">Windows</span>
+                <span class="badge">Один файл</span>
+                <span class="badge">Без установки</span>
+            </div>
+            <p style="margin-top: 10px; font-size: 0.95rem; color: #ccc;">
+                Скачайте и запустите – сразу готово к работе.
+            </p>
+        </div>
+
+        <div class="footnote">
+            Версия 1.0 · Для Windows 7/10/11
+        </div>
+    </div>
+
+    <script>
+        // Если файл называется иначе, можно поменять ссылку вручную,
+        // либо просто переименовать сам exe-файл в main.exe
+        console.log('Ссылка ведёт на main.exe. При необходимости измените href.');
+    </script>
+</body>
+</html>
